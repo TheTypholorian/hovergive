@@ -1,0 +1,4 @@
+{
+  "hovergive.keybind": "Press %s to copy /give command",
+  "key.hovergive": "Copy /give for current item stack"
+}

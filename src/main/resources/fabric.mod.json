@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "hovergive",
+  "version": "${version}",
+  "name": "Hovergive",
+  "description": "Hold an item and press Z to copy it's /give command",
+  "authors": [
+    "The Typhothanian"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.typho.hovergive.client.HovergiveClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
