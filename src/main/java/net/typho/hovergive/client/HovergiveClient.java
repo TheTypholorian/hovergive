@@ -8,6 +8,7 @@ import net.minecraft.client.option.KeyBinding;
 import net.minecraft.component.Component;
 import net.minecraft.component.ComponentMap;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.RegistryOps;
 import org.lwjgl.glfw.GLFW;
 
 import java.util.LinkedList;
@@ -50,7 +51,7 @@ public class HovergiveClient implements ClientModInitializer {
                                     .append(String.join(
                                             ", ",
                                             components.stream()
-                                                    .map(comp -> comp.type() + "=" + comp.encode(JsonOps.INSTANCE).getOrThrow().toString())
+                                                    .map(comp -> comp.type() + "=" + comp.encode(RegistryOps.of(JsonOps.INSTANCE, client.player.clientWorld.getRegistryManager())).getOrThrow().toString())
                                                     .toArray(String[]::new)
                                             ))
                                     .append(']');
